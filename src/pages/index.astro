@@ -1,5 +1,6 @@
 ---
 import { getCollection, getEntry, render } from 'astro:content';
+import NewsletterSignup from '../components/NewsletterSignup.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 
 const page = await getEntry('pages', 'home');
@@ -50,6 +51,11 @@ const recentPosts = (await getCollection('blog', ({ data }) => !data.draft))
       <div class="content">
         <Content />
       </div>
+    </div>
+  </section>
+  <section class="newsletter-band">
+    <div class="container">
+      <NewsletterSignup />
     </div>
   </section>
   {
@@ -161,6 +167,10 @@ const recentPosts = (await getCollection('blog', ({ data }) => !data.draft))
     padding: 70px 0;
     background: #ffffff;
     border-top: 1px solid var(--line);
+  }
+
+  .newsletter-band {
+    padding: 0 0 70px;
   }
 
   .section-heading {

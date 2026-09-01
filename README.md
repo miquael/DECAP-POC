@@ -17,6 +17,9 @@ Editor -> `/admin` -> Decap CMS -> GitHub OAuth -> GitHub repository -> Netlify 
 - Blog posts: `src/data/blog/`
 - CMS uploads: `public/uploads/`
 
+## Forms
+The contact and newsletter forms submit to `/thank-you/` for the demo. See `SETUP.md` for the later n8n webhook handoff.
+
 ## CMS
 The Decap CMS admin app is served from `/admin/`.
 

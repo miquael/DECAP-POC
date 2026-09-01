@@ -1,0 +1,34 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Thank You | Maya Raman" description="Thanks for reaching out to Maya Raman.">
+  <section class="page-section thank-you">
+    <div class="narrow">
+      <p class="eyebrow">Received</p>
+      <h1>Thank you.</h1>
+      <p class="lede">Your note has been received.</p>
+      <a class="button" href="/">Return Home</a>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .thank-you {
+    min-height: 60vh;
+    display: grid;
+    align-items: center;
+  }
+
+  h1 {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(3rem, 10vw, 6rem);
+    font-weight: 600;
+    line-height: 0.95;
+  }
+
+  .lede {
+    margin: 18px 0 28px;
+  }
+</style>

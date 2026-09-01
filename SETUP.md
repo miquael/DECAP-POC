@@ -55,3 +55,12 @@ https://decap-poc.netlify.app/admin/
 3. Log in with a GitHub account that has write access to the repository.
 
 If the repository is private, review GitHub OAuth scopes and Netlify provider behavior before assuming private repository access works.
+
+## n8n Forms
+The contact and newsletter forms currently submit to the static `/thank-you/` page for demo safety.
+
+When n8n webhooks are ready:
+- Update `formAction` in `src/components/ContactForm.astro`.
+- Update `formMethod` in `src/components/ContactForm.astro` to `post`.
+- Update `formAction` in `src/components/NewsletterSignup.astro`.
+- Update `formMethod` in `src/components/NewsletterSignup.astro` to `post`.
