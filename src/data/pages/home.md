@@ -1,8 +1,9 @@
 ---
 title: Home
 eyebrow: Author Website POC
-headline: A clear, editable author homepage.
-intro: This sample site proves that a nontechnical editor can update structured content, images, and blog posts through Decap CMS.
+headline: A clear, editable author homepage ... with juice.
+intro: This sample site proves that a nontechnical editor can update structured
+  content, images, and blog posts through Decap CMS. Yes
 heroImage: /uploads/author-desk.svg
 heroImageAlt: A simple desk scene with pages, a notebook, and a warm lamp.
 primaryCtaLabel: Read the Blog
