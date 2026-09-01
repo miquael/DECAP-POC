@@ -2,8 +2,11 @@
 
 These steps happen after the code builds locally.
 
+Repository: `miquael/DECAP-POC`
+Netlify site: `https://decap-poc.netlify.app/`
+
 ## GitHub
-1. Create or use a GitHub repository.
+1. Use the GitHub repository `miquael/DECAP-POC`.
 2. Push this project to the `main` branch.
 3. Give each CMS editor write access to the repository.
 4. Create a GitHub OAuth App.
@@ -38,14 +41,15 @@ Publish directory: dist
 ```yml
 backend:
   name: github
-  repo: OWNER/REPOSITORY
+  repo: miquael/DECAP-POC
   branch: main
+  site_domain: decap-poc.netlify.app
 ```
 
 2. Visit:
 
 ```text
-https://DEPLOYED-SITE/admin/
+https://decap-poc.netlify.app/admin/
 ```
 
 3. Log in with a GitHub account that has write access to the repository.

@@ -20,10 +20,11 @@ Editor -> `/admin` -> Decap CMS -> GitHub OAuth -> GitHub repository -> Netlify 
 ## CMS
 The Decap CMS admin app is served from `/admin/`.
 
-Before live testing, update `public/admin/config.yml`:
+CMS backend:
 
 ```yml
-repo: OWNER/REPOSITORY
+repo: miquael/DECAP-POC
+site_domain: decap-poc.netlify.app
 ```
 
 ## Deployment Flow

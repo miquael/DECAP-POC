@@ -1,8 +1,8 @@
 backend:
   name: github
-  # TODO: Replace OWNER/REPOSITORY with the GitHub repository path, for example: example-org/author-site-poc
-  repo: OWNER/REPOSITORY
+  repo: miquael/DECAP-POC
   branch: main
+  site_domain: decap-poc.netlify.app
 
 publish_mode: simple
 media_folder: public/uploads
