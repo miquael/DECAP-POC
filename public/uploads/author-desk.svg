@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-label="A simple desk scene with pages, a notebook, and a warm lamp.">
+  <rect width="1200" height="900" fill="#f2eee6"/>
+  <rect x="110" y="160" width="980" height="580" rx="28" fill="#ffffff" stroke="#ded8cd" stroke-width="6"/>
+  <rect x="185" y="235" width="330" height="420" rx="12" fill="#f7c98a"/>
+  <rect x="570" y="235" width="420" height="68" rx="8" fill="#2f6f73"/>
+  <rect x="570" y="340" width="360" height="28" rx="8" fill="#cfc7ba"/>
+  <rect x="570" y="395" width="300" height="28" rx="8" fill="#cfc7ba"/>
+  <rect x="570" y="450" width="340" height="28" rx="8" fill="#cfc7ba"/>
+  <circle cx="350" cy="445" r="88" fill="#b65b3c"/>
+  <path d="M225 670h740" stroke="#23201c" stroke-width="12" stroke-linecap="round"/>
+</svg>

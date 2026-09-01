@@ -3,7 +3,7 @@
 ## Open Questions
 - Which GitHub owner/repository should Decap target?
 - Should the POC repository be public for the first test, or private with reviewed OAuth scopes?
-- Will local implementation use npm commands exactly as the prompt describes, or pnpm if the initialized Astro project chooses it?
+- User approved pnpm for local install/build and Netlify build command consistency.
 
 ## Watch Items
 - Old Decap tutorials commonly recommend Netlify Identity and Git Gateway; do not follow that path for this POC.

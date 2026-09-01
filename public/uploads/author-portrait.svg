@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 900" role="img" aria-label="Abstract portrait placeholder for the author.">
+  <rect width="900" height="900" fill="#e9f0ed"/>
+  <circle cx="450" cy="330" r="150" fill="#2f6f73"/>
+  <path d="M225 780c30-180 145-270 225-270s195 90 225 270" fill="#b65b3c"/>
+  <circle cx="400" cy="320" r="16" fill="#ffffff"/>
+  <circle cx="500" cy="320" r="16" fill="#ffffff"/>
+  <path d="M385 395c42 34 88 34 130 0" fill="none" stroke="#ffffff" stroke-width="14" stroke-linecap="round"/>
+</svg>

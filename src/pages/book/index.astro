@@ -1,0 +1,69 @@
+---
+import { getEntry, render } from 'astro:content';
+import PageHero from '../../components/PageHero.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const page = await getEntry('pages', 'book');
+
+if (!page) {
+  throw new Error('Missing book page content.');
+}
+
+const { Content } = await render(page);
+const {
+  title,
+  bookTitle,
+  subtitle,
+  coverImage,
+  coverImageAlt,
+  description,
+  buyButtonLabel,
+  buyUrl,
+} = page.data;
+---
+
+<BaseLayout title={`${title} | Author POC`} description={description}>
+  <PageHero title={title} intro={description} />
+  <section class="page-section">
+    <div class="container book-grid">
+      {coverImage && <div class="media-block"><img src={coverImage} alt={coverImageAlt ?? ''} /></div>}
+      <div class="content">
+        {bookTitle && <h2>{bookTitle}</h2>}
+        {subtitle && <p class="subtitle">{subtitle}</p>}
+        <Content />
+        {buyButtonLabel && buyUrl && <a class="button" href={buyUrl}>{buyButtonLabel}</a>}
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .book-grid {
+    display: grid;
+    grid-template-columns: minmax(220px, 360px) minmax(0, 1fr);
+    gap: 48px;
+    align-items: start;
+  }
+
+  h2 {
+    margin: 0 0 8px;
+    font-size: clamp(2rem, 5vw, 3.4rem);
+    line-height: 1.05;
+  }
+
+  .subtitle {
+    margin: 0 0 24px;
+    color: var(--muted);
+    font-size: 1.2rem;
+  }
+
+  .button {
+    margin-top: 12px;
+  }
+
+  @media (max-width: 760px) {
+    .book-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

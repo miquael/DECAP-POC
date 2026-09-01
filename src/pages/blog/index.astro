@@ -1,0 +1,92 @@
+---
+import { getCollection } from 'astro:content';
+import PageHero from '../../components/PageHero.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const posts = (await getCollection('blog', ({ data }) => !data.draft)).sort(
+  (a, b) => b.data.publishedDate.getTime() - a.data.publishedDate.getTime(),
+);
+
+const formatDate = new Intl.DateTimeFormat('en', {
+  month: 'long',
+  day: 'numeric',
+  year: 'numeric',
+});
+---
+
+<BaseLayout title="Blog / Updates | Author POC" description="Latest author updates and sample posts.">
+  <PageHero title="Blog / Updates" intro="A Decap-managed blog index generated from Markdown files." />
+  <section class="page-section">
+    <div class="container post-list">
+      {
+        posts.map((post) => (
+          <article class="post-card">
+            {post.data.featuredImage && <img src={post.data.featuredImage} alt={post.data.featuredImageAlt ?? ''} />}
+            <div>
+              <p class="date">{formatDate.format(post.data.publishedDate)}</p>
+              <h2><a href={`/blog/${post.id}/`}>{post.data.title}</a></h2>
+              <p>{post.data.description}</p>
+            </div>
+          </article>
+        ))
+      }
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .post-list {
+    display: grid;
+    gap: 24px;
+  }
+
+  .post-card {
+    display: grid;
+    grid-template-columns: 220px minmax(0, 1fr);
+    gap: 24px;
+    align-items: start;
+    padding: 22px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: #ffffff;
+  }
+
+  .post-card img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 6px;
+  }
+
+  .date {
+    margin: 0 0 8px;
+    color: var(--warm);
+    font-size: 0.88rem;
+    font-weight: 800;
+  }
+
+  h2 {
+    margin: 0 0 8px;
+    font-size: clamp(1.5rem, 4vw, 2.2rem);
+    line-height: 1.1;
+  }
+
+  h2 a {
+    color: var(--ink);
+    text-decoration: none;
+  }
+
+  h2 a:hover {
+    color: var(--accent-dark);
+  }
+
+  p {
+    margin: 0;
+  }
+
+  @media (max-width: 680px) {
+    .post-card {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

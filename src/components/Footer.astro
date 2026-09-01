@@ -1,0 +1,36 @@
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>Author Website CMS Proof of Concept</p>
+    <a href="/admin/index.html">CMS Login</a>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+  }
+
+  .footer-inner {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 28px 0;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  a {
+    font-weight: 700;
+  }
+
+  @media (max-width: 640px) {
+    .footer-inner {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+  }
+</style>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 1080" role="img" aria-label="Placeholder book cover with simple geometric artwork.">
+  <rect width="720" height="1080" fill="#23201c"/>
+  <rect x="70" y="78" width="580" height="924" rx="12" fill="#fbfaf7"/>
+  <rect x="128" y="150" width="464" height="88" fill="#2f6f73"/>
+  <circle cx="360" cy="450" r="150" fill="#f7c98a"/>
+  <path d="M210 650h300M210 708h230M210 766h270" stroke="#23201c" stroke-width="22" stroke-linecap="round"/>
+  <rect x="128" y="870" width="180" height="34" fill="#b65b3c"/>
+</svg>

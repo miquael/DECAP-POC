@@ -1,0 +1,54 @@
+---
+import { getEntry, render } from 'astro:content';
+import PageHero from '../../components/PageHero.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const page = await getEntry('pages', 'speaking');
+
+if (!page) {
+  throw new Error('Missing speaking page content.');
+}
+
+const { Content } = await render(page);
+const { title, intro, topics = [], contactCtaLabel } = page.data;
+---
+
+<BaseLayout title={`${title} | Author POC`} description={intro}>
+  <PageHero title={title} intro={intro} />
+  <section class="page-section">
+    <div class="narrow">
+      {
+        topics.length > 0 && (
+          <ul class="topic-list">
+            {topics.map((topic) => <li>{topic}</li>)}
+          </ul>
+        )
+      }
+      <div class="content">
+        <Content />
+      </div>
+      {contactCtaLabel && <a class="button" href="/contact/">{contactCtaLabel}</a>}
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .topic-list {
+    display: grid;
+    gap: 12px;
+    margin: 0 0 34px;
+    padding: 0;
+    list-style: none;
+  }
+
+  .topic-list li {
+    padding: 16px 18px;
+    border-left: 4px solid var(--accent);
+    background: #ffffff;
+    font-weight: 700;
+  }
+
+  .button {
+    margin-top: 16px;
+  }
+</style>
