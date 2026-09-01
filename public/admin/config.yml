@@ -73,7 +73,6 @@ collections:
         fields:
           - { label: Page Title, name: title, widget: string }
           - { label: Intro Paragraph, name: intro, widget: text }
-          - { label: Email, name: email, widget: string }
           - { label: Contact Page Copy, name: body, widget: markdown, required: false }
 
   - name: blog

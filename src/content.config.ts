@@ -24,7 +24,6 @@ const pages = defineCollection({
     buyUrl: z.string().optional(),
     topics: z.array(z.string()).optional(),
     contactCtaLabel: z.string().optional(),
-    email: z.email().optional(),
   }),
 });
 
