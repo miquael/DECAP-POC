@@ -1,0 +1,45 @@
+# Node
+node_modules
+.pnpm-store
+
+# Build
+dist
+build
+.next
+out
+
+# Logs
+logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# Environment
+.env
+.env.local
+.env.production
+.env.development
+
+# System
+.DS_Store
+.tmp
+
+# IDE
+.vscode
+.idea
+
+# TypeScript
+*.tsbuildinfo
+
+# Human
+.human
+
+# Phase plan files (generated during setup, deleted after execution)
+.ai/docs/plans/*.md
+
+# Personal / project-specific (not part of public template)
+_DESIGN-GUIDES/GAIO/
+_STARTER-PROMPTS/INTEGRATE-DESIGN-GUIDES.md
+_STARTER-PROMPTS/UPDATE-DOCS.md
+LICENSE-MG.md
+_GLOBAL/CLAUDE.local.md
