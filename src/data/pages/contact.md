@@ -1,7 +1,7 @@
 ---
 title: Contact
-intro: A simple contact page for readers, event organizers, and media inquiries.
+intro: For event invitations, media inquiries, book club questions, and general notes, use the email below.
 email: hello@example.com
 ---
 
-For the POC, this page uses a visible email link instead of a form. That keeps the site static and avoids adding server-side infrastructure.
+Please include the event date, location, format, audience size, and any relevant deadlines. Maya's team usually replies within a few business days.

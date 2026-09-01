@@ -1,11 +1,12 @@
 ---
 title: Speaking / Media
-intro: A simple page for talks, interviews, appearances, and booking context.
+intro: Maya speaks with bookstores, libraries, universities, podcasts, and cultural organizations.
 topics:
-  - Writing and creative practice
-  - The themes behind the book
-  - Workshops and audience Q&A
+  - Myth, memory, and modern storytelling
+  - How family archives become fiction
+  - Ritual objects as creative prompts
+  - Building a sustainable notebook practice
 contactCtaLabel: Ask About Availability
 ---
 
-This page gives editors a structured topic list plus free-form body copy. It is intentionally simple so field labels and editing flow can be evaluated without extra UI complexity.
+Available formats include readings, moderated conversations, craft lectures, podcast interviews, and small-group workshops. Maya's events are warm, accessible, and grounded in concrete examples from research, drafting, revision, and the long work of learning what a book is really about.

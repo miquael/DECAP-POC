@@ -22,7 +22,7 @@ const {
 } = page.data;
 ---
 
-<BaseLayout title={`${title} | Author POC`} description={description}>
+<BaseLayout title={`${title} | Maya Raman`} description={description}>
   <PageHero title={title} intro={description} />
   <section class="page-section">
     <div class="container book-grid">
@@ -41,8 +41,17 @@ const {
   .book-grid {
     display: grid;
     grid-template-columns: minmax(220px, 360px) minmax(0, 1fr);
-    gap: 48px;
+    gap: 58px;
     align-items: start;
+  }
+
+  .media-block {
+    max-width: 340px;
+  }
+
+  .media-block img {
+    aspect-ratio: 2 / 3;
+    object-position: center;
   }
 
   h2 {
@@ -53,8 +62,9 @@ const {
 
   .subtitle {
     margin: 0 0 24px;
-    color: var(--muted);
+    color: var(--berry);
     font-size: 1.2rem;
+    font-weight: 700;
   }
 
   .button {
@@ -64,6 +74,10 @@ const {
   @media (max-width: 760px) {
     .book-grid {
       grid-template-columns: 1fr;
+    }
+
+    .media-block {
+      max-width: 280px;
     }
   }
 </style>

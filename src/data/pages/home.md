@@ -1,15 +1,15 @@
 ---
 title: Home
-eyebrow: Author Website POC
-headline: A clear, editable author homepage ... with juice.
-intro: This sample site proves that a nontechnical editor can update structured
-  content, images, and blog posts through Decap CMS. Yes
-heroImage: /uploads/author-desk.svg
-heroImageAlt: A simple desk scene with pages, a notebook, and a warm lamp.
-primaryCtaLabel: Read the Blog
-primaryCtaUrl: /blog/
+eyebrow: Novelist, essayist, speaker
+headline: Stories for thresholds, rituals, and luminous ordinary days.
+intro: Maya Raman writes fiction and essays about memory, devotion, migration,
+  and the quiet courage required to begin again.
+heroImage: https://upload.wikimedia.org/wikipedia/commons/6/6a/India_ganesha.jpg
+heroImageAlt: An ornate stone sculpture of Ganesha seated beneath a carved arch.
+primaryCtaLabel: Explore the Book
+primaryCtaUrl: /book/
 ---
 
-This homepage body is editable Markdown. It can hold longer introductory copy, notes about the author's work, or a short welcome message without changing any Astro component code.
+Maya's work moves between intimate family stories and larger questions of inheritance, faith, and belonging. Her essays have appeared in literary journals and arts programs, and her talks invite readers into the research, notebooks, and rituals behind the finished page.
 
-The important test is whether this text can be changed in Decap, committed to GitHub, rebuilt by Netlify, and reflected on the live site.
+Her current book follows one family across three cities and two generations, tracing what we carry, what we misremember, and what finally asks to be released.

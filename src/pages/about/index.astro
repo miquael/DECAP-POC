@@ -13,7 +13,7 @@ const { Content } = await render(page);
 const { title, intro, portrait, portraitAlt } = page.data;
 ---
 
-<BaseLayout title={`${title} | Author POC`} description={intro}>
+<BaseLayout title={`${title} | Maya Raman`} description={intro}>
   <PageHero title={title} intro={intro} />
   <section class="page-section">
     <div class="container split">
@@ -28,9 +28,18 @@ const { title, intro, portrait, portraitAlt } = page.data;
 <style>
   .split {
     display: grid;
-    grid-template-columns: minmax(240px, 0.75fr) minmax(0, 1.25fr);
-    gap: 42px;
+    grid-template-columns: minmax(240px, 0.82fr) minmax(0, 1.18fr);
+    gap: 52px;
     align-items: start;
+  }
+
+  .content {
+    padding-top: 10px;
+  }
+
+  .media-block img {
+    max-height: 520px;
+    object-position: center top;
   }
 
   @media (max-width: 760px) {

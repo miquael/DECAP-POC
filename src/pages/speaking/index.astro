@@ -13,7 +13,7 @@ const { Content } = await render(page);
 const { title, intro, topics = [], contactCtaLabel } = page.data;
 ---
 
-<BaseLayout title={`${title} | Author POC`} description={intro}>
+<BaseLayout title={`${title} | Maya Raman`} description={intro}>
   <PageHero title={title} intro={intro} />
   <section class="page-section">
     <div class="narrow">
@@ -42,10 +42,12 @@ const { title, intro, topics = [], contactCtaLabel } = page.data;
   }
 
   .topic-list li {
-    padding: 16px 18px;
+    padding: 18px 20px;
     border-left: 4px solid var(--accent);
     background: #ffffff;
+    border-radius: 0 8px 8px 0;
     font-weight: 700;
+    box-shadow: 0 14px 38px rgba(38, 31, 26, 0.06);
   }
 
   .button {

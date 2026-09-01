@@ -13,31 +13,31 @@ editor:
 
 collections:
   - name: pages
-    label: Pages
+    label: Website Pages
     files:
       - name: home
         label: Home
         file: src/data/pages/home.md
         fields:
           - { label: Page Title, name: title, widget: string }
-          - { label: Eyebrow, name: eyebrow, widget: string, required: false }
-          - { label: Main Headline, name: headline, widget: string }
-          - { label: Intro, name: intro, widget: text }
-          - { label: Hero Image, name: heroImage, widget: image, required: false }
-          - { label: Hero Image Alt Text, name: heroImageAlt, widget: string, required: false }
+          - { label: Small Label Above Headline, name: eyebrow, widget: string, required: false, hint: Short phrase shown above the main homepage headline. }
+          - { label: Main Headline, name: headline, widget: string, hint: The largest text on the homepage. }
+          - { label: Intro Paragraph, name: intro, widget: text, hint: One or two sentences below the headline. }
+          - { label: Hero Image, name: heroImage, widget: image, required: false, hint: Upload a new image or keep the current remote image URL. }
+          - { label: Hero Image Alt Text, name: heroImageAlt, widget: string, required: false, hint: Describe the image for screen readers. }
           - { label: Primary Button Label, name: primaryCtaLabel, widget: string, required: false }
           - { label: Primary Button URL, name: primaryCtaUrl, widget: string, required: false }
-          - { label: Body, name: body, widget: markdown, required: false }
+          - { label: Main Page Copy, name: body, widget: markdown, required: false }
 
       - name: about
         label: About
         file: src/data/pages/about.md
         fields:
           - { label: Page Title, name: title, widget: string }
-          - { label: Intro, name: intro, widget: text }
+          - { label: Intro Paragraph, name: intro, widget: text }
           - { label: Portrait, name: portrait, widget: image, required: false }
-          - { label: Portrait Alt Text, name: portraitAlt, widget: string, required: false }
-          - { label: Body, name: body, widget: markdown, required: false }
+          - { label: Portrait Alt Text, name: portraitAlt, widget: string, required: false, hint: Describe the portrait for screen readers. }
+          - { label: Biography Copy, name: body, widget: markdown, required: false }
 
       - name: book
         label: Book
@@ -46,46 +46,48 @@ collections:
           - { label: Page Title, name: title, widget: string }
           - { label: Book Title, name: bookTitle, widget: string }
           - { label: Subtitle, name: subtitle, widget: string, required: false }
-          - { label: Cover Image, name: coverImage, widget: image, required: false }
-          - { label: Cover Image Alt Text, name: coverImageAlt, widget: string, required: false }
-          - { label: Short Description, name: description, widget: text }
+          - { label: Book Cover Image, name: coverImage, widget: image, required: false }
+          - { label: Book Cover Alt Text, name: coverImageAlt, widget: string, required: false, hint: Describe the book cover for screen readers. }
+          - { label: Short Book Description, name: description, widget: text }
           - { label: Purchase Button Label, name: buyButtonLabel, widget: string, required: false }
           - { label: Purchase URL, name: buyUrl, widget: string, required: false }
-          - { label: Body, name: body, widget: markdown, required: false }
+          - { label: Book Page Copy, name: body, widget: markdown, required: false }
 
       - name: speaking
         label: Speaking / Media
         file: src/data/pages/speaking.md
         fields:
           - { label: Page Title, name: title, widget: string }
-          - { label: Intro, name: intro, widget: text }
+          - { label: Intro Paragraph, name: intro, widget: text }
           - label: Topics
             name: topics
             widget: list
             required: false
             field: { label: Topic, name: topic, widget: string }
           - { label: Contact Button Label, name: contactCtaLabel, widget: string, required: false }
-          - { label: Body, name: body, widget: markdown, required: false }
+          - { label: Speaking Page Copy, name: body, widget: markdown, required: false }
 
       - name: contact
         label: Contact
         file: src/data/pages/contact.md
         fields:
           - { label: Page Title, name: title, widget: string }
-          - { label: Intro, name: intro, widget: text }
+          - { label: Intro Paragraph, name: intro, widget: text }
           - { label: Email, name: email, widget: string }
-          - { label: Body, name: body, widget: markdown, required: false }
+          - { label: Contact Page Copy, name: body, widget: markdown, required: false }
 
   - name: blog
-    label: Blog / Updates
+    label: Notes / Updates
     folder: src/data/blog
     create: true
+    identifier_field: title
     slug: "{{slug}}"
+    summary: "{{title}} — {{publishedDate}}"
     fields:
       - { label: Title, name: title, widget: string }
-      - { label: Description, name: description, widget: text }
+      - { label: Short Description, name: description, widget: text, hint: One or two sentences shown on the Notes page. }
       - { label: Published Date, name: publishedDate, widget: datetime, date_format: YYYY-MM-DD, time_format: false }
       - { label: Featured Image, name: featuredImage, widget: image, required: false }
-      - { label: Featured Image Alt Text, name: featuredImageAlt, widget: string, required: false }
-      - { label: Draft, name: draft, widget: boolean, default: false }
-      - { label: Body, name: body, widget: markdown }
+      - { label: Featured Image Alt Text, name: featuredImageAlt, widget: string, required: false, hint: Describe the image for screen readers. }
+      - { label: Save As Draft, name: draft, widget: boolean, default: false }
+      - { label: Post Body, name: body, widget: markdown }

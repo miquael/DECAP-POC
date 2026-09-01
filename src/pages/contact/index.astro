@@ -13,7 +13,7 @@ const { Content } = await render(page);
 const { title, intro, email } = page.data;
 ---
 
-<BaseLayout title={`${title} | Author POC`} description={intro}>
+<BaseLayout title={`${title} | Maya Raman`} description={intro}>
   <PageHero title={title} intro={intro} />
   <section class="page-section">
     <div class="narrow content">
@@ -25,7 +25,10 @@ const { title, intro, email } = page.data;
 
 <style>
   .contact-line {
-    font-size: 1.35rem;
+    margin-bottom: 28px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(1.8rem, 6vw, 3.2rem);
     font-weight: 800;
+    line-height: 1.05;
   }
 </style>
